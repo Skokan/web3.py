@@ -82,7 +82,7 @@ setup(
         "eth-hash[pycryptodome]>=0.2.0,<1.0.0",
         # eth-account allows too broad of an eth-rlp dependency.
         # This eth-rlp pin can be removed once it gets tightened up in eth-account
-        "eth-rlp<0.3",
+        "eth-rlp<=0.3",
         "eth-typing>=2.0.0,<3.0.0",
         "eth-utils>=1.9.5,<=2.0.0",
         "hexbytes>=0.1.0,<1.0.0",
