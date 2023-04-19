@@ -19,9 +19,9 @@ from web3._utils.http import (
     construct_user_agent,
 )
 from web3._utils.request import (
-    cache_session,
+    cache_and_return_session,
     get_default_http_endpoint,
-    make_post_request,
+    make_post_request
 )
 from web3.datastructures import (
     NamedElementOnion,
@@ -61,7 +61,7 @@ class HTTPProvider(JSONBaseProvider):
         self._request_kwargs = request_kwargs or {}
 
         if session:
-            cache_session(self.endpoint_uri, session)
+            cache_and_return_session(self.endpoint_uri, session)
 
         super().__init__()
 
